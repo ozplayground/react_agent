@@ -1,0 +1,77 @@
+{
+  "table_name": "weather_data",
+  "table_comment": "날씨 데이터 분석을 통해 생성된 기상 상세 테이블 (2026년 1월~7월 일별 데이터 포함)",
+  "columns": [
+    {
+      "name": "date",
+      "type": "DATE",
+      "primary_key": true,
+      "nullable": false,
+      "comment": "date 컬럼 (기본키)"
+    },
+    {
+      "name": "min_temp",
+      "type": "DOUBLE PRECISION",
+      "primary_key": false,
+      "nullable": true,
+      "comment": "min_temp 컬럼 (기상 정보 상세 데이터)"
+    },
+    {
+      "name": "max_temp",
+      "type": "DOUBLE PRECISION",
+      "primary_key": false,
+      "nullable": true,
+      "comment": "max_temp 컬럼 (기상 정보 상세 데이터)"
+    },
+    {
+      "name": "condition",
+      "type": "VARCHAR(255)",
+      "primary_key": false,
+      "nullable": true,
+      "comment": "condition 컬럼 (기상 정보 상세 데이터)"
+    },
+    {
+      "name": "precipitation_probability",
+      "type": "INTEGER",
+      "primary_key": false,
+      "nullable": true,
+      "comment": "precipitation_probability 컬럼 (기상 정보 상세 데이터)"
+    },
+    {
+      "name": "precipitation",
+      "type": "DOUBLE PRECISION",
+      "primary_key": false,
+      "nullable": true,
+      "comment": "precipitation 컬럼 (기상 정보 상세 데이터)"
+    },
+    {
+      "name": "snowfall",
+      "type": "DOUBLE PRECISION",
+      "primary_key": false,
+      "nullable": true,
+      "comment": "snowfall 컬럼 (기상 정보 상세 데이터)"
+    },
+    {
+      "name": "wind_speed",
+      "type": "DOUBLE PRECISION",
+      "primary_key": false,
+      "nullable": true,
+      "comment": "wind_speed 컬럼 (기상 정보 상세 데이터)"
+    },
+    {
+      "name": "wind_direction",
+      "type": "VARCHAR(255)",
+      "primary_key": false,
+      "nullable": true,
+      "comment": "wind_direction 컬럼 (기상 정보 상세 데이터)"
+    }
+  ],
+  "indexes": [
+    {
+      "name": "idx_weather_data_condition",
+      "columns": [
+        "condition"
+      ]
+    }
+  ]
+}
